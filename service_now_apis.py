@@ -189,4 +189,3 @@ def find_comment(incident, comment):
         if comment == comment_info['value']:
             return True
     return False
-

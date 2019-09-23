@@ -40,6 +40,7 @@ IOS_XE_HOST_IP = execute('sh run int gi1 | in ip address').split(' ')[3]
 
 # retrieve the device hostname using RESTCONF
 DEVICE_HOSTNAME = netconf_restconf.get_restconf_hostname(IOS_XE_HOST_IP, IOS_XE_USER, IOS_XE_PASS)
+DEVICE_HOSTNAME = DEVICE_HOSTNAME+'.ablitz.com'
 print(str('\nThe device hostname: ' + DEVICE_HOSTNAME))
 
 # create a new Service Now incident

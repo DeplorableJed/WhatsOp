@@ -46,6 +46,7 @@ def get_dnac_jwt_token(dnac_auth):
     header = {'content-type': 'application/json'}
     response = requests.post(url, auth=dnac_auth, headers=header, verify=False)
     dnac_jwt_token = response.json()['Token']
+    print(dnac_jwt_token)
     return dnac_jwt_token
 
 
@@ -1119,8 +1120,8 @@ def get_site_health(epoch_time, dnac_jwt_token):
 auth_token = get_dnac_jwt_token(DNAC_AUTH)
 print(auth_token)
 
-path_id = create_path_trace('10.93.130.46', '10.93.140.35', auth_token)
-time.sleep(10)
+#path_id = create_path_trace('10.10.10.91', '10.10.10.204', auth_token)
+#time.sleep(10)
 
-print('Path Trace from 10.93.130.46 to 10.93.140.35')
-utils.pprint(get_path_trace_info(path_id, auth_token))
+#print('Path Trace from Your CSR to DNA Center')
+#utils.pprint(get_path_trace_info(path_id, auth_token))

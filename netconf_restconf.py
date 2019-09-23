@@ -148,4 +148,3 @@ def get_restconf_capabilities(ios_xe_host, ios_xe_user, ios_xe_pass):
     response = requests.get(url, headers=header, verify=False, auth=dev_auth)
     capabilities_json =  response.json()
     return capabilities_json['ietf-netconf-monitoring:capabilities']
-
